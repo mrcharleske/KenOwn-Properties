@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KenOwn Holdings Limited - Your Kenyan Property Dreams Start Here</title><!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/kenown-logo.png"><!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="KenOwn Holdings Limited - Empowering Kenyan Property Ownership">
+  <meta property="og:description" content="Join 1,000+ families who chose KenOwn for property ownership, development &amp; real estate in Kenya. Your legacy starts here.">
+  <meta property="og:image" content="images/kenown-logo.png">
+  <meta property="og:url" content="https://kenownholdings.com">
+  <meta property="og:type" content="website"><!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KenOwn Holdings Limited">
+  <meta name="twitter:description" content="Empowering Kenyan Ownership in Property, Development &amp; Real Estate">
+  <meta name="twitter:image" content="images/kenown-logo.png"><!-- SEO Meta -->
+  <meta name="description" content="KenOwn Holdings Limited - Leading Kenyan property development, real estate investment, and housing solutions. Trusted by 1000+ families across Kenya.">
+  <meta name="keywords" content="Kenya real estate, property development, land investment, Nairobi properties, Kenyan housing, diaspora investment, property management Kenya"><!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"><!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- Elements SDK -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --gold: #D4AF37;
+            --dark-blue: #1B365D;
+            --white: #FFFFFF;
+            --light-gold: #F4E4BC;
+            --dark-gold: #B8941F;
+            --navy: #0F2A44;
+            --gray-light: #F8F9FA;
+            --gray-dark: #6C757D;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-blue);
+            overflow-x: hidden;
+        }
+        
+        /* Sticky Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(27, 54, 93, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: var(--dark-blue);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+        }
+        
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(27, 54, 93, 0.8), rgba(212, 175, 55, 0.3));
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .cta-btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-primary {
+            background: var(--gold);
+            color: var(--dark-blue);
+        }
+        
+        .cta-primary:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .cta-secondary:hover {
+            background: var(--white);
+            color: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Slider Dots */
+        .slider-dots {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 10;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            background: var(--gold);
+            transform: scale(1.2);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 4rem 0;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        /* About Preview Section */
+        .about-preview {
+            padding: 6rem 0;
+            background: var(--gray-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-dark);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-blue);
+        }
+        
+        .about-text h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        /* Divisions Section */
+        .divisions {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+        
+        .divisions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .division-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--gold);
+        }
+        
+        .division-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .division-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .division-icon i {
+            font-size: 2rem;
+            color: var(--dark-blue);
+        }
+        
+        .division-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .division-card p {
+            color: var(--gray-dark);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .division-cta {
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .division-cta:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+        }
+        
+        /* Featured Projects */
+        .featured-projects {
+            padding: 6rem 0;
+            background: var(--gray-light);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .project-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .project-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .project-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-location {
+            color: var(--gray-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .project-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .project-features {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+        }
+        
+        .project-cta {
+            width: 100%;
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .project-cta:hover {
+            background: var(--navy);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 0;
+            background: var(--dark-blue);
+            color: var(--white);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+        
+        .author-info h4 {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            color: var(--dark-blue);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn-large {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-btn-dark {
+            background: var(--dark-blue);
+            color: var(--white);
+        }
+        
+        .cta-btn-dark:hover {
+            background: var(--navy);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(27, 54, 93, 0.3);
+        }
+        
+        .cta-btn-light {
+            background: var(--white);
+            color: var(--dark-blue);
+        }
+        
+        .cta-btn-light:hover {
+            background: var(--gray-light);
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+        
+        /* WhatsApp Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+        
+        .whatsapp-btn {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .divisions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-widget {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigation -->
+  <nav class="navbar" id="navbar">
+   <div class="nav-container">
+    <div class="logo"><img src="images/kenown-logo.png" alt="KenOwn Holdings Logo" onerror="this.src=''; this.alt='KenOwn Logo'; this.style.display='none';">
+     <div class="logo-text">
+      KenOwn Holdings
+     </div>
+    </div>
+    <ul class="nav-links">
+     <li><a href="#home">Home</a></li>
+     <li><a href="about.html">About Us</a></li>
+     <li><a href="divisions.html">Our Divisions</a></li>
+     <li><a href="projects.html">Projects</a></li>
+     <li><a href="blog.html">Blog</a></li>
+     <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu" id="mobileMenu"><i class="fas fa-bars"></i>
+    </div>
+   </div>
+  </nav><!-- Hero Section -->
+  <section class="hero" id="home">
+   <div class="hero-slider">
+    <div class="hero-slide active" style="background-image: url('images/hero-property1.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/hero-property2.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/hero-property3.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/hero-property4.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/hero-property5.jpg')"></div>
+   </div>
+   <div class="hero-content">
+    <h1 class="hero-title" id="heroTitle">Your Kenyan Legacy Starts Here</h1>
+    <p class="hero-subtitle" id="heroSubtitle">Join 1,000+ Families Who Chose KenOwn for Their Property Dreams</p>
+    <div class="hero-cta"><a href="contact.html" class="cta-btn cta-primary" id="ctaPrimary">Start My Property Journey</a> <a href="projects.html" class="cta-btn cta-secondary" id="ctaSecondary">Schedule Private Tour</a>
+    </div>
+   </div>
+   <div class="slider-dots"><span class="dot active" onclick="currentSlide(1)"></span> <span class="dot" onclick="currentSlide(2)"></span> <span class="dot" onclick="currentSlide(3)"></span> <span class="dot" onclick="currentSlide(4)"></span> <span class="dot" onclick="currentSlide(5)"></span>
+   </div>
+  </section><!-- Stats Section -->
+  <section class="stats">
+   <div class="stats-container">
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+     <div class="stat-number">
+      1000+
+     </div>
+     <div class="stat-label">
+      Happy Families
+     </div>
+    </div>
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+     <div class="stat-number">
+      15
+     </div>
+     <div class="stat-label">
+      Years Experience
+     </div>
+    </div>
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+     <div class="stat-number">
+      500+
+     </div>
+     <div class="stat-label">
+      Properties Delivered
+     </div>
+    </div>
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+     <div class="stat-number">
+      50+
+     </div>
+     <div class="stat-label">
+      Ongoing Projects
+     </div>
+    </div>
+   </div>
+  </section><!-- About Preview -->
+  <section class="about-preview">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Building Dreams, Creating Legacies</h2>
+     <p class="section-subtitle">For over 15 years, we've been transforming lives through property ownership across Kenya</p>
+    </div>
+    <div class="about-content">
+     <div class="about-text" data-aos="fade-right">
+      <h3>Your Trusted Property Partner</h3>
+      <p>At KenOwn Holdings Limited, we understand that owning property is more than just an investment – it's about creating a legacy for your family and securing your future in Kenya.</p>
+      <p>From bustling Nairobi to the coastal beauty of Mombasa, we've helped over 1,000 families achieve their property dreams through our comprehensive approach to real estate development, property management, and investment guidance.</p><a href="about.html" class="cta-btn cta-primary" style="margin-top: 1rem;">Learn Our Story</a>
+     </div>
+     <div class="about-image" data-aos="fade-left"><img src="images/about-team.jpg" alt="KenOwn Holdings Team" onerror="this.src=''; this.alt='Our Professional Team'; this.style.display='none';">
+     </div>
+    </div>
+   </div>
+  </section><!-- Divisions -->
+  <section class="divisions">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Our Three Pillars of Excellence</h2>
+     <p class="section-subtitle">Comprehensive property solutions tailored to your unique needs</p>
+    </div>
+    <div class="divisions-grid">
+     <div class="division-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="division-icon"><i class="fas fa-home"></i>
+      </div>
+      <h3>KenOwn Properties</h3>
+      <p>Your gateway to property ownership. We specialize in buying, selling, and managing premium land, houses, and rental properties across Kenya's most desirable locations.</p><a href="divisions.html#properties" class="division-cta">Explore Properties</a>
+     </div>
+     <div class="division-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="division-icon"><i class="fas fa-building"></i>
+      </div>
+      <h3>KenOwn Developers</h3>
+      <p>From concept to completion, we handle every aspect of property development and construction, delivering quality homes and commercial spaces that stand the test of time.</p><a href="divisions.html#developers" class="division-cta">View Projects</a>
+     </div>
+     <div class="division-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="division-icon"><i class="fas fa-handshake"></i>
+      </div>
+      <h3>KenOwn Real Estate</h3>
+      <p>Professional agency, consultancy, valuation, and brokerage services. Our expert team guides you through every step of your property journey with transparency and trust.</p><a href="divisions.html#realestate" class="division-cta">Get Consultation</a>
+     </div>
+    </div>
+   </div>
+  </section><!-- Featured Projects -->
+  <section class="featured-projects">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Featured Properties</h2>
+     <p class="section-subtitle">Discover your perfect home from our exclusive collection</p>
+    </div>
+    <div class="projects-grid">
+     <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-image" style="background-image: url('images/project1.jpg')">
+       <div class="project-badge">
+        New Launch
+       </div>
+      </div>
+      <div class="project-content">
+       <h3 class="project-title">Westlands Executive Apartments</h3>
+       <div class="project-location"><i class="fas fa-map-marker-alt"></i> Westlands, Nairobi
+       </div>
+       <div class="project-price">
+        From KSh 8.5M
+       </div>
+       <div class="project-features"><span><i class="fas fa-bed"></i> 3 Beds</span> <span><i class="fas fa-bath"></i> 2 Baths</span> <span><i class="fas fa-car"></i> Parking</span>
+       </div><button class="project-cta" onclick="openInquiryForm('Westlands Executive Apartments')">Schedule Viewing</button>
+      </div>
+     </div>
+     <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="project-image" style="background-image: url('images/project2.jpg')">
+       <div class="project-badge">
+        Hot Deal
+       </div>
+      </div>
+      <div class="project-content">
+       <h3 class="project-title">Karen Family Villas</h3>
+       <div class="project-location"><i class="fas fa-map-marker-alt"></i> Karen, Nairobi
+       </div>
+       <div class="project-price">
+        From KSh 15M
+       </div>
+       <div class="project-features"><span><i class="fas fa-bed"></i> 4 Beds</span> <span><i class="fas fa-bath"></i> 3 Baths</span> <span><i class="fas fa-tree"></i> Garden</span>
+       </div><button class="project-cta" onclick="openInquiryForm('Karen Family Villas')">Get Quote</button>
+      </div>
+     </div>
+     <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="project-image" style="background-image: url('images/project3.jpg')">
+       <div class="project-badge">
+        Investment
+       </div>
+      </div>
+      <div class="project-content">
+       <h3 class="project-title">Mombasa Beach Condos</h3>
+       <div class="project-location"><i class="fas fa-map-marker-alt"></i> Nyali, Mombasa
+       </div>
+       <div class="project-price">
+        From KSh 12M
+       </div>
+       <div class="project-features"><span><i class="fas fa-bed"></i> 2 Beds</span> <span><i class="fas fa-bath"></i> 2 Baths</span> <span><i class="fas fa-water"></i> Sea View</span>
+       </div><button class="project-cta" onclick="openInquiryForm('Mombasa Beach Condos')">Invest Now</button>
+      </div>
+     </div>
+    </div>
+    <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up"><a href="projects.html" class="cta-btn cta-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">View All Properties</a>
+    </div>
+   </div>
+  </section><!-- Testimonials -->
+  <section class="testimonials">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title" style="color: white;">What Our Clients Say</h2>
+     <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Real stories from families who found their dream homes with KenOwn</p>
+    </div>
+    <div class="testimonials-grid">
+     <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="testimonial-text">
+       "KenOwn Holdings made our dream of owning a home in Nairobi a reality. Their team guided us through every step, and now we have a beautiful family home in Westlands."
+      </div>
+      <div class="testimonial-author">
+       <div class="author-avatar">
+        MK
+       </div>
+       <div class="author-info">
+        <h4>Mary Kamau</h4>
+        <p>Homeowner, Westlands</p>
+       </div>
+      </div>
+     </div>
+     <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="testimonial-text">
+       "As a diaspora investor, I was worried about investing from abroad. KenOwn's transparency and regular updates gave me complete confidence in my investment."
+      </div>
+      <div class="testimonial-author">
+       <div class="author-avatar">
+        JM
+       </div>
+       <div class="author-info">
+        <h4>John Mwangi</h4>
+        <p>Investor, USA</p>
+       </div>
+      </div>
+     </div>
+     <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="testimonial-text">
+       "The construction quality and attention to detail in our Karen villa exceeded our expectations. KenOwn Developers truly delivers on their promises."
+      </div>
+      <div class="testimonial-author">
+       <div class="author-avatar">
+        SA
+       </div>
+       <div class="author-info">
+        <h4>Sarah Achieng</h4>
+        <p>Villa Owner, Karen</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- CTA Section -->
+  <section class="cta-section">
+   <div class="container">
+    <div class="cta-content" data-aos="fade-up">
+     <h2>Ready to Start Your Property Journey?</h2>
+     <p>Join thousands of satisfied clients who chose KenOwn Holdings for their property dreams. Your legacy starts with a single step.</p>
+     <div class="cta-buttons"><a href="contact.html" class="cta-btn-large cta-btn-dark">Get Free Consultation</a> <a href="tel:+254700000000" class="cta-btn-large cta-btn-light">Call Now: +254 700 000 000</a>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KenOwn Holdings Limited</h3>
+      <p>Empowering Kenyan Ownership in Property, Development &amp; Real Estate.</p>
+      <p>Building dreams and creating legacies across Kenya for over 15 years.</p>
+      <div class="social-links"><a href="https://facebook.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-f"></i> </a> <a href="https://twitter.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i> </a> <a href="https://instagram.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a> <a href="https://linkedin.com/company/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin-in"></i> </a> <a href="https://youtube.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-youtube"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Our Services</h3>
+      <p><a href="divisions.html#properties">Property Sales &amp; Management</a></p>
+      <p><a href="divisions.html#developers">Construction &amp; Development</a></p>
+      <p><a href="divisions.html#realestate">Real Estate Consultancy</a></p>
+      <p><a href="projects.html">Investment Opportunities</a></p>
+      <p><a href="contact.html">Property Valuation</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3>
+      <p><a href="about.html">About Us</a></p>
+      <p><a href="projects.html">Current Projects</a></p>
+      <p><a href="blog.html">Investment Tips</a></p>
+      <p><a href="contact.html">Contact Us</a></p>
+      <p><a href="contact.html">Schedule Viewing</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+      <p><i class="fas fa-envelope"></i> info@kenownholdings.co.ke</p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: +254 700 000 000</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KenOwn Holdings Limited. All rights reserved. | Building Kenyan Dreams Since 2009</p>
+    </div>
+   </div>
+  </footer><!-- WhatsApp Widget -->
+  <div class="whatsapp-widget"><a href="https://wa.me/254700000000?text=Hi%20KenOwn%20Holdings,%20I'm%20interested%20in%20learning%20more%20about%20your%20properties" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp"> <i class="fab fa-whatsapp"></i> </a>
+  </div><!-- Inquiry Modal -->
+  <div id="inquiryModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center;">
+   <div style="background: white; padding: 2rem; border-radius: 15px; max-width: 500px; width: 90%; max-height: 90%; overflow-y: auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+     <h3 style="color: var(--dark-blue); margin: 0;">Property Inquiry</h3><button onclick="closeInquiryForm()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--gray-dark);">×</button>
+    </div>
+    <form id="inquiryForm" onsubmit="submitInquiry(event)">
+     <div style="margin-bottom: 1rem;"><label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark-blue);">Property of Interest:</label> <input type="text" id="propertyName" readonly style="width: 100%; padding: 0.8rem; border: 2px solid var(--light-gold); border-radius: 8px; background: var(--gray-light);">
+     </div>
+     <div style="margin-bottom: 1rem;"><label for="clientName" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark-blue);">Full Name:</label> <input type="text" id="clientName" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--light-gold); border-radius: 8px;">
+     </div>
+     <div style="margin-bottom: 1rem;"><label for="clientEmail" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark-blue);">Email:</label> <input type="email" id="clientEmail" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--light-gold); border-radius: 8px;">
+     </div>
+     <div style="margin-bottom: 1rem;"><label for="clientPhone" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark-blue);">Phone Number:</label> <input type="tel" id="clientPhone" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--light-gold); border-radius: 8px;">
+     </div>
+     <div style="margin-bottom: 1.5rem;"><label for="inquiryMessage" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark-blue);">Message:</label> <textarea id="inquiryMessage" rows="4" style="width: 100%; padding: 0.8rem; border: 2px solid var(--light-gold); border-radius: 8px; resize: vertical;" placeholder="Tell us about your requirements..."></textarea>
+     </div><button type="submit" style="width: 100%; background: var(--gold); color: var(--dark-blue); padding: 1rem; border: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease;"> Send Inquiry </button>
+    </form>
+   </div>
+  </div><!-- Success Message -->
+  <div id="successMessage" style="display: none; position: fixed; top: 2rem; right: 2rem; background: var(--gold); color: var(--dark-blue); padding: 1rem 1.5rem; border-radius: 8px; z-index: 3000; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+   Thank you! We'll contact you within 24 hours.
+  </div><!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Hero Slider
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.dot');
+        const heroTexts = [
+            {
+                title: "Your Kenyan Legacy Starts Here",
+                subtitle: "Join 1,000+ Families Who Chose KenOwn for Their Property Dreams"
+            },
+            {
+                title: "From Dreams to Keys",
+                subtitle: "Experience the joy of homeownership with Kenya's most trusted property developer"
+            },
+            {
+                title: "Building Kenya's Future",
+                subtitle: "Premium developments across Nairobi, Mombasa, and beyond"
+            },
+            {
+                title: "Invest in Your Tomorrow",
+                subtitle: "Secure your family's future with prime Kenyan real estate"
+            },
+            {
+                title: "Diaspora Dreams Made Real",
+                subtitle: "Invest in Kenya from anywhere in the world with complete confidence"
+            }
+        ];
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            // Update hero text
+            const heroTitle = document.getElementById('heroTitle');
+            const heroSubtitle = document.getElementById('heroSubtitle');
+            heroTitle.textContent = heroTexts[index].title;
+            heroSubtitle.textContent = heroTexts[index].subtitle;
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-advance slides
+        setInterval(nextSlide, 5000);
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Inquiry Form Functions
+        function openInquiryForm(propertyName) {
+            document.getElementById('propertyName').value = propertyName;
+            document.getElementById('inquiryModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeInquiryForm() {
+            document.getElementById('inquiryModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            document.getElementById('inquiryForm').reset();
+        }
+
+        function submitInquiry(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = {
+                property: document.getElementById('propertyName').value,
+                name: document.getElementById('clientName').value,
+                email: document.getElementById('clientEmail').value,
+                phone: document.getElementById('clientPhone').value,
+                message: document.getElementById('inquiryMessage').value
+            };
+            
+            // Simulate form submission
+            console.log('Inquiry submitted:', formData);
+            
+            // Close modal and show success message
+            closeInquiryForm();
+            showSuccessMessage();
+            
+            // In a real implementation, you would send this data to your server
+            // fetch('/submit-inquiry', { method: 'POST', body: JSON.stringify(formData) })
+        }
+
+        function showSuccessMessage() {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'block';
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('inquiryModal').addEventListener('click', (e) => {
+            if (e.target.id === 'inquiryModal') {
+                closeInquiryForm();
+            }
+        });
+
+        // Mobile menu toggle (basic implementation)
+        document.getElementById('mobileMenu').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Elements SDK Configuration
+        const defaultConfig = {
+            company_name: "KenOwn Holdings Limited",
+            company_slogan: "Empowering Kenyan Ownership in Property, Development & Real Estate",
+            hero_title: "Your Kenyan Legacy Starts Here",
+            hero_subtitle: "Join 1,000+ Families Who Chose KenOwn for Their Property Dreams",
+            cta_primary: "Start My Property Journey",
+            cta_secondary: "Schedule Private Tour"
+        };
+
+        async function onConfigChange(config) {
+            // Update company name in logo
+            const logoText = document.querySelector('.logo-text');
+            if (logoText) {
+                logoText.textContent = config.company_name || defaultConfig.company_name;
+            }
+
+            // Update hero content
+            const heroTitle = document.getElementById('heroTitle');
+            const heroSubtitle = document.getElementById('heroSubtitle');
+            const ctaPrimary = document.getElementById('ctaPrimary');
+            const ctaSecondary = document.getElementById('ctaSecondary');
+
+            if (heroTitle) heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
+            if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+            if (ctaPrimary) ctaPrimary.textContent = config.cta_primary || defaultConfig.cta_primary;
+            if (ctaSecondary) ctaSecondary.textContent = config.cta_secondary || defaultConfig.cta_secondary;
+
+            // Update hero texts array for slider
+            heroTexts[0] = {
+                title: config.hero_title || defaultConfig.hero_title,
+                subtitle: config.hero_subtitle || defaultConfig.hero_subtitle
+            };
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["company_name", config.company_name || defaultConfig.company_name],
+                ["company_slogan", config.company_slogan || defaultConfig.company_slogan],
+                ["hero_title", config.hero_title || defaultConfig.hero_title],
+                ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                ["cta_primary", config.cta_primary || defaultConfig.cta_primary],
+                ["cta_secondary", config.cta_secondary || defaultConfig.cta_secondary]
+            ]);
+        }
+
+        // Initialize Elements SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'996d093fa1854eb9',t:'MTc2MTg0OTU3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
