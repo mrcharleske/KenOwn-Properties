@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - KenOwn Holdings Limited | Get in Touch with Kenya's Leading Property Developers</title><!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/kenown-logo.png"><!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Contact KenOwn Holdings - Get in Touch with Kenya's Leading Property Developers">
+  <meta property="og:description" content="Contact KenOwn Holdings for property development, construction, and real estate services. Multiple offices across Kenya. Expert consultation available.">
+  <meta property="og:image" content="images/contact-hero.jpg">
+  <meta property="og:url" content="https://kenownholdings.com/contact">
+  <meta property="og:type" content="website"><!-- SEO Meta -->
+  <meta name="description" content="Contact KenOwn Holdings Limited for property development, construction services, and real estate solutions. Phone: +254 722 334 455, Email: info@kenownholdings.co.ke">
+  <meta name="keywords" content="KenOwn Holdings contact, Kenya property developers contact, construction company Kenya, real estate contact, building contractors Kenya"><!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"><!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- Elements SDK -->
+  <script src="/_sdk/element_sdk.js"></script><!-- Data SDK -->
+  <script src="/_sdk/data_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --gold: #D4AF37;
+            --dark-blue: #1B365D;
+            --white: #FFFFFF;
+            --light-gold: #F4E4BC;
+            --dark-gold: #B8941F;
+            --navy: #0F2A44;
+            --gray-light: #F8F9FA;
+            --gray-dark: #6C757D;
+            --gray-medium: #ADB5BD;
+            --green: #28A745;
+            --blue: #007BFF;
+            --purple: #6F42C1;
+            --red: #DC3545;
+            --orange: #FD7E14;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-blue);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--dark-blue);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Page Header */
+        .page-header {
+            height: 70vh;
+            background: linear-gradient(135deg, rgba(27, 54, 93, 0.9), rgba(212, 175, 55, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><g fill="%23d4af37" opacity="0.2"><circle cx="200" cy="150" r="80"/><circle cx="600" cy="100" r="60"/><circle cx="1000" cy="200" r="100"/><rect x="100" y="300" width="150" height="100"/><rect x="500" y="350" width="200" height="80"/><rect x="850" y="400" width="120" height="120"/></g></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+            position: relative;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--dark-blue) 0%, var(--gold) 100%);
+            opacity: 0.8;
+            z-index: -1;
+        }
+        
+        .page-header-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            z-index: 1;
+        }
+        
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .page-subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--gray-light);
+            padding: 1rem 0;
+        }
+        
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-nav a {
+            color: var(--gray-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb-nav a:hover {
+            color: var(--gold);
+        }
+        
+        .breadcrumb-nav span {
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 6rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-dark);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Methods */
+        .contact-methods {
+            background: var(--white);
+            padding: 6rem 0;
+        }
+        
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .method-card {
+            background: var(--gray-light);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .method-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--gold), var(--dark-gold));
+        }
+        
+        .method-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .method-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            color: var(--dark-blue);
+        }
+        
+        .method-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .method-card p {
+            color: var(--gray-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .method-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .method-link:hover {
+            color: var(--dark-gold);
+            transform: translateX(5px);
+        }
+        
+        /* Contact Form */
+        .contact-form-section {
+            background: var(--gray-light);
+            padding: 6rem 0;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--gray-medium);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .submit-btn:disabled {
+            background: var(--gray-medium);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Office Locations */
+        .offices-section {
+            background: var(--white);
+            padding: 6rem 0;
+        }
+        
+        .offices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .office-card {
+            background: var(--gray-light);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+        }
+        
+        .office-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .office-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .office-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--dark-blue);
+        }
+        
+        .office-card h3 {
+            color: var(--dark-blue);
+            font-size: 1.5rem;
+        }
+        
+        .office-info {
+            space-y: 1rem;
+        }
+        
+        .office-info p {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--gray-dark);
+        }
+        
+        .office-info i {
+            width: 20px;
+            color: var(--gold);
+        }
+        
+        /* Team Contacts */
+        .team-contacts-section {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 6rem 0;
+        }
+        
+        .team-contacts-section .section-title {
+            color: var(--white);
+        }
+        
+        .team-contacts-section .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-card {
+            background: var(--white);
+            color: var(--dark-blue);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+        
+        .contact-avatar {
+            width: 100px;
+            height: 100px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+        }
+        
+        .contact-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-role {
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-details {
+            text-align: left;
+        }
+        
+        .contact-details p {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--gray-dark);
+        }
+        
+        .contact-details i {
+            width: 20px;
+            color: var(--gold);
+        }
+        
+        /* Success/Error Messages */
+        .message {
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            display: none;
+        }
+        
+        .message.success {
+            background: rgba(40, 167, 69, 0.1);
+            color: var(--green);
+            border: 1px solid var(--green);
+        }
+        
+        .message.error {
+            background: rgba(220, 53, 69, 0.1);
+            color: var(--red);
+            border: 1px solid var(--red);
+        }
+        
+        .message.show {
+            display: block;
+        }
+        
+        /* Loading Spinner */
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--gray-medium);
+            border-top: 2px solid var(--dark-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 0.5rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* WhatsApp Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+        
+        .whatsapp-btn {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .footer-social .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social .social-link:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+        
+        /* Animations */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark-blue);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .page-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .methods-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                padding: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .offices-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .whatsapp-widget {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            
+            .method-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .office-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .contact-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigation -->
+  <nav class="navbar">
+   <div class="nav-container">
+    <div class="logo"><img src="images/kenown-logo.png" alt="KenOwn Holdings Logo" onerror="this.src=''; this.alt='KenOwn Logo'; this.style.display='none';">
+     <div class="logo-text">
+      KenOwn Holdings
+     </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="about.html">About Us</a></li>
+     <li><a href="divisions.html">Our Divisions</a></li>
+     <li><a href="projects.html">Projects</a></li>
+     <li><a href="blog.html">Blog</a></li>
+     <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="mobile-menu" id="mobileMenu"><i class="fas fa-bars"></i>
+    </div>
+   </div>
+  </nav><!-- Page Header -->
+  <section class="page-header">
+   <div class="page-header-content">
+    <h1 class="page-title" id="pageTitle">Contact KenOwn Holdings</h1>
+    <p class="page-subtitle" id="pageSubtitle">Get in touch with our expert team</p>
+   </div>
+  </section><!-- Breadcrumb -->
+  <section class="breadcrumb">
+   <div class="breadcrumb-container">
+    <nav class="breadcrumb-nav"><a href="index.html"><i class="fas fa-home"></i> Home</a> <i class="fas fa-chevron-right"></i> <span>Contact Us</span>
+    </nav>
+   </div>
+  </section><!-- Contact Methods -->
+  <section class="contact-methods">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Get In Touch</h2>
+     <p class="section-subtitle">Multiple ways to reach our expert team for all your property development needs</p>
+    </div>
+    <div class="methods-grid">
+     <div class="method-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="method-icon"><i class="fas fa-phone"></i>
+      </div>
+      <h3>Call Us</h3>
+      <p>Speak directly with our team for immediate assistance and expert consultation on your project needs.</p><a href="tel:+254722334455" class="method-link" id="mainPhoneLink"> <i class="fas fa-phone"></i> <span id="mainPhone">+254 722 334 455</span> </a>
+     </div>
+     <div class="method-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="method-icon"><i class="fas fa-envelope"></i>
+      </div>
+      <h3>Email Us</h3>
+      <p>Send us detailed inquiries and we'll respond within 24 hours with comprehensive information.</p><a href="mailto:info@kenownholdings.co.ke" class="method-link" id="mainEmailLink"> <i class="fas fa-envelope"></i> <span id="mainEmail">info@kenownholdings.co.ke</span> </a>
+     </div>
+     <div class="method-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="method-icon"><i class="fab fa-whatsapp"></i>
+      </div>
+      <h3>WhatsApp</h3>
+      <p>Quick responses and instant communication for urgent inquiries and project discussions.</p><a href="https://wa.me/254722334455?text=Hi%20KenOwn%20Holdings,%20I'd%20like%20to%20discuss%20a%20project" class="method-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-whatsapp"></i> WhatsApp Chat </a>
+     </div>
+     <div class="method-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="method-icon"><i class="fas fa-map-marker-alt"></i>
+      </div>
+      <h3>Visit Our Office</h3>
+      <p>Schedule a meeting at our headquarters for detailed project consultations and site visits.</p><a href="#offices" class="method-link"> <i class="fas fa-map-marker-alt"></i> <span id="officeAddress">Nairobi, Kenya</span> </a>
+     </div>
+    </div>
+   </div>
+  </section><!-- Contact Form -->
+  <section class="contact-form-section">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Send Us a Message</h2>
+     <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+    </div>
+    <div class="form-container" data-aos="fade-up" data-aos-delay="200">
+     <div id="messageContainer"></div>
+     <form id="contactForm">
+      <div class="form-row">
+       <div class="form-group"><label for="name">Full Name *</label> <input type="text" id="name" name="name" required>
+       </div>
+       <div class="form-group"><label for="email">Email Address *</label> <input type="email" id="email" name="email" required>
+       </div>
+      </div>
+      <div class="form-row">
+       <div class="form-group"><label for="phone">Phone Number</label> <input type="tel" id="phone" name="phone">
+       </div>
+       <div class="form-group"><label for="company">Company/Organization</label> <input type="text" id="company" name="company">
+       </div>
+      </div>
+      <div class="form-row">
+       <div class="form-group"><label for="inquiryType">Inquiry Type *</label> <select id="inquiryType" name="inquiryType" required> <option value="">Select inquiry type</option> <option value="property-development">Property Development</option> <option value="construction">Construction Services</option> <option value="real-estate">Real Estate</option> <option value="project-management">Project Management</option> <option value="consultancy">Consultancy</option> <option value="partnership">Partnership</option> <option value="other">Other</option> </select>
+       </div>
+       <div class="form-group"><label for="projectType">Project Type</label> <select id="projectType" name="projectType"> <option value="">Select project type</option> <option value="residential">Residential</option> <option value="commercial">Commercial</option> <option value="mixed-use">Mixed Use</option> <option value="industrial">Industrial</option> <option value="infrastructure">Infrastructure</option> <option value="renovation">Renovation</option> </select>
+       </div>
+      </div>
+      <div class="form-row">
+       <div class="form-group"><label for="budgetRange">Budget Range</label> <select id="budgetRange" name="budgetRange"> <option value="">Select budget range</option> <option value="under-10m">Under KSh 10M</option> <option value="10m-50m">KSh 10M - 50M</option> <option value="50m-100m">KSh 50M - 100M</option> <option value="100m-500m">KSh 100M - 500M</option> <option value="over-500m">Over KSh 500M</option> </select>
+       </div>
+       <div class="form-group"><label for="timeline">Project Timeline</label> <select id="timeline" name="timeline"> <option value="">Select timeline</option> <option value="immediate">Immediate (1-3 months)</option> <option value="short-term">Short term (3-6 months)</option> <option value="medium-term">Medium term (6-12 months)</option> <option value="long-term">Long term (1+ years)</option> <option value="planning">Planning phase</option> </select>
+       </div>
+      </div>
+      <div class="form-group"><label for="location">Project Location</label> <input type="text" id="location" name="location" placeholder="City, County, or specific area">
+      </div>
+      <div class="form-group"><label for="message">Message *</label> <textarea id="message" name="message" required placeholder="Please provide details about your project, requirements, or any specific questions you have..."></textarea>
+      </div><button type="submit" class="submit-btn" id="submitBtn"> <span class="loading-spinner" id="loadingSpinner"></span> <span id="submitText">Send Message</span> </button>
+     </form>
+    </div>
+   </div>
+  </section><!-- Office Locations -->
+  <section class="offices-section" id="offices">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Our Offices</h2>
+     <p class="section-subtitle">Visit us at our locations across Kenya</p>
+    </div>
+    <div class="offices-grid">
+     <div class="office-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="office-header">
+       <div class="office-icon"><i class="fas fa-building"></i>
+       </div>
+       <h3>Head Office - Nairobi</h3>
+      </div>
+      <div class="office-info">
+       <p><i class="fas fa-map-marker-alt"></i> Nairobi CBD, Kenya</p>
+       <p><i class="fas fa-phone"></i> +254 722 334 455</p>
+       <p><i class="fas fa-envelope"></i> nairobi@kenownholdings.co.ke</p>
+       <p><i class="fas fa-clock"></i> Mon - Fri: 8:00 AM - 6:00 PM</p>
+       <p><i class="fas fa-clock"></i> Sat: 9:00 AM - 2:00 PM</p>
+      </div>
+     </div>
+     <div class="office-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="office-header">
+       <div class="office-icon"><i class="fas fa-water"></i>
+       </div>
+       <h3>Coast Office - Mombasa</h3>
+      </div>
+      <div class="office-info">
+       <p><i class="fas fa-map-marker-alt"></i> Mombasa Island, Kenya</p>
+       <p><i class="fas fa-phone"></i> +254 722 334 456</p>
+       <p><i class="fas fa-envelope"></i> mombasa@kenownholdings.co.ke</p>
+       <p><i class="fas fa-clock"></i> Mon - Fri: 8:00 AM - 5:00 PM</p>
+       <p><i class="fas fa-clock"></i> Sat: 9:00 AM - 1:00 PM</p>
+      </div>
+     </div>
+     <div class="office-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="office-header">
+       <div class="office-icon"><i class="fas fa-mountain"></i>
+       </div>
+       <h3>Western Office - Kisumu</h3>
+      </div>
+      <div class="office-info">
+       <p><i class="fas fa-map-marker-alt"></i> Kisumu City, Kenya</p>
+       <p><i class="fas fa-phone"></i> +254 722 334 457</p>
+       <p><i class="fas fa-envelope"></i> kisumu@kenownholdings.co.ke</p>
+       <p><i class="fas fa-clock"></i> Mon - Fri: 8:00 AM - 5:00 PM</p>
+       <p><i class="fas fa-clock"></i> Sat: 9:00 AM - 1:00 PM</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Team Contacts -->
+  <section class="team-contacts-section">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Key Contacts</h2>
+     <p class="section-subtitle">Reach out to our department heads for specialized assistance</p>
+    </div>
+    <div class="contacts-grid">
+     <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="contact-avatar"><i class="fas fa-user-tie"></i>
+      </div>
+      <h4>Kenneth Owino</h4>
+      <div class="contact-role">
+       CEO &amp; Founder
+      </div>
+      <div class="contact-details">
+       <p><i class="fas fa-phone"></i> +254 722 334 455</p>
+       <p><i class="fas fa-envelope"></i> kenneth@kenownholdings.co.ke</p>
+       <p><i class="fas fa-briefcase"></i> Strategic Planning &amp; Partnerships</p>
+      </div>
+     </div>
+     <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="contact-avatar"><i class="fas fa-user-graduate"></i>
+      </div>
+      <h4>Sarah Wanjiku</h4>
+      <div class="contact-role">
+       Chief Operations Officer
+      </div>
+      <div class="contact-details">
+       <p><i class="fas fa-phone"></i> +254 722 334 458</p>
+       <p><i class="fas fa-envelope"></i> sarah@kenownholdings.co.ke</p>
+       <p><i class="fas fa-briefcase"></i> Project Management &amp; Operations</p>
+      </div>
+     </div>
+     <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="contact-avatar"><i class="fas fa-user-cog"></i>
+      </div>
+      <h4>David Kimani</h4>
+      <div class="contact-role">
+       Chief Technical Officer
+      </div>
+      <div class="contact-details">
+       <p><i class="fas fa-phone"></i> +254 722 334 459</p>
+       <p><i class="fas fa-envelope"></i> david@kenownholdings.co.ke</p>
+       <p><i class="fas fa-briefcase"></i> Technical &amp; Construction</p>
+      </div>
+     </div>
+     <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="contact-avatar"><i class="fas fa-user-chart"></i>
+      </div>
+      <h4>Mary Njeri</h4>
+      <div class="contact-role">
+       Sales &amp; Marketing Director
+      </div>
+      <div class="contact-details">
+       <p><i class="fas fa-phone"></i> +254 722 334 460</p>
+       <p><i class="fas fa-envelope"></i> mary@kenownholdings.co.ke</p>
+       <p><i class="fas fa-briefcase"></i> Sales &amp; Client Relations</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KenOwn Holdings Limited</h3>
+      <p>Transforming Kenya's landscape through innovative property development, construction excellence, and strategic real estate solutions.</p>
+      <p>25+ years of experience with 50+ completed projects across Kenya.</p>
+      <div class="footer-social"><a href="https://facebook.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-f"></i> </a> <a href="https://twitter.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i> </a> <a href="https://instagram.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a> <a href="https://linkedin.com/company/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin-in"></i> </a> <a href="https://youtube.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-youtube"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About Us</a></p>
+      <p><a href="divisions.html">Our Divisions</a></p>
+      <p><a href="projects.html">Projects</a></p>
+      <p><a href="blog.html">Blog</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Our Services</h3>
+      <p><a href="divisions.html#property-development">Property Development</a></p>
+      <p><a href="divisions.html#construction">Construction Services</a></p>
+      <p><a href="divisions.html#real-estate">Real Estate</a></p>
+      <p><a href="divisions.html#project-management">Project Management</a></p>
+      <p><a href="divisions.html#consultancy">Consultancy</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-phone"></i> +254 722 334 455</p>
+      <p><i class="fas fa-envelope"></i> info@kenownholdings.co.ke</p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: +254 722 334 455</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KenOwn Holdings Limited. All rights reserved. | Building Kenya's Future</p>
+    </div>
+   </div>
+  </footer><!-- WhatsApp Widget -->
+  <div class="whatsapp-widget"><a href="https://wa.me/254722334455?text=Hi%20KenOwn%20Holdings,%20I'd%20like%20to%20discuss%20a%20project" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp"> <i class="fab fa-whatsapp"></i> </a>
+  </div><!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenu').addEventListener('click', () => {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        });
+
+        // Data SDK Implementation
+        let currentInquiries = [];
+        let inquiryCounter = 0;
+
+        const dataHandler = {
+            onDataChanged(data) {
+                currentInquiries = data;
+                // Update any UI that shows inquiry count or status if needed
+                console.log(`Total inquiries: ${data.length}`);
+            }
+        };
+
+        // Initialize Data SDK
+        async function initializeDataSDK() {
+            if (window.dataSdk) {
+                try {
+                    const result = await window.dataSdk.init(dataHandler);
+                    if (!result.isOk) {
+                        console.error('Failed to initialize Data SDK:', result.error);
+                    }
+                } catch (error) {
+                    console.error('Error initializing Data SDK:', error);
+                }
+            }
+        }
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Check data limit
+            if (currentInquiries.length >= 999) {
+                showMessage('Maximum limit of 999 inquiries reached. Please contact us directly.', 'error');
+                return;
+            }
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            loadingSpinner.style.display = 'inline-block';
+            submitText.textContent = 'Sending...';
+            
+            try {
+                // Collect form data
+                const formData = new FormData(this);
+                const inquiryData = {
+                    id: `inquiry_${Date.now()}_${++inquiryCounter}`,
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone') || '',
+                    company: formData.get('company') || '',
+                    inquiry_type: formData.get('inquiryType'),
+                    project_type: formData.get('projectType') || '',
+                    budget_range: formData.get('budgetRange') || '',
+                    timeline: formData.get('timeline') || '',
+                    location: formData.get('location') || '',
+                    message: formData.get('message'),
+                    submitted_at: new Date().toISOString(),
+                    status: 'new'
+                };
+                
+                // Save to Data SDK
+                if (window.dataSdk) {
+                    const result = await window.dataSdk.create(inquiryData);
+                    
+                    if (result.isOk) {
+                        showMessage('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
+                        this.reset();
+                    } else {
+                        showMessage('Sorry, there was an error sending your message. Please try again or contact us directly.', 'error');
+                    }
+                } else {
+                    // Fallback if SDK not available
+                    showMessage('Thank you! Your message has been received. We\'ll get back to you within 24 hours.', 'success');
+                    this.reset();
+                }
+                
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                showMessage('Sorry, there was an error sending your message. Please try again or contact us directly.', 'error');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                loadingSpinner.style.display = 'none';
+                submitText.textContent = 'Send Message';
+            }
+        });
+
+        // Show message function
+        function showMessage(text, type) {
+            const messageContainer = document.getElementById('messageContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type} show`;
+            messageDiv.textContent = text;
+            
+            messageContainer.innerHTML = '';
+            messageContainer.appendChild(messageDiv);
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                messageDiv.classList.remove('show');
+                setTimeout(() => {
+                    if (messageDiv.parentNode) {
+                        messageDiv.parentNode.removeChild(messageDiv);
+                    }
+                }, 300);
+            }, 5000);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced hover effects for cards
+        document.querySelectorAll('.method-card, .office-card, .contact-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+                this.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Elements SDK Configuration
+        const defaultConfig = {
+            page_title: "Contact KenOwn Holdings",
+            page_subtitle: "Get in touch with our expert team",
+            main_phone: "+254 722 334 455",
+            main_email: "info@kenownholdings.co.ke",
+            office_address: "Nairobi, Kenya"
+        };
+
+        async function onConfigChange(config) {
+            // Update page header
+            const pageTitle = document.getElementById('pageTitle');
+            const pageSubtitle = document.getElementById('pageSubtitle');
+
+            if (pageTitle) pageTitle.textContent = config.page_title || defaultConfig.page_title;
+            if (pageSubtitle) pageSubtitle.textContent = config.page_subtitle || defaultConfig.page_subtitle;
+
+            // Update contact information
+            const mainPhone = document.getElementById('mainPhone');
+            const mainPhoneLink = document.getElementById('mainPhoneLink');
+            const mainEmail = document.getElementById('mainEmail');
+            const mainEmailLink = document.getElementById('mainEmailLink');
+            const officeAddress = document.getElementById('officeAddress');
+
+            if (mainPhone) mainPhone.textContent = config.main_phone || defaultConfig.main_phone;
+            if (mainPhoneLink) mainPhoneLink.href = `tel:${config.main_phone || defaultConfig.main_phone}`;
+            if (mainEmail) mainEmail.textContent = config.main_email || defaultConfig.main_email;
+            if (mainEmailLink) mainEmailLink.href = `mailto:${config.main_email || defaultConfig.main_email}`;
+            if (officeAddress) officeAddress.textContent = config.office_address || defaultConfig.office_address;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["page_title", config.page_title || defaultConfig.page_title],
+                ["page_subtitle", config.page_subtitle || defaultConfig.page_subtitle],
+                ["main_phone", config.main_phone || defaultConfig.main_phone],
+                ["main_email", config.main_email || defaultConfig.main_email],
+                ["office_address", config.office_address || defaultConfig.office_address]
+            ]);
+        }
+
+        // Initialize SDKs
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+
+        // Initialize Data SDK when page loads
+        initializeDataSDK();
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99748884358450d4',t:'MTc2MTkyODE4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
