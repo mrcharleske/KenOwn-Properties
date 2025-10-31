@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - KenOwn Holdings Limited | Property Development Insights &amp; Market Trends</title><!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/kenown-logo.png"><!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="KenOwn Holdings Blog - Property Development Insights &amp; Market Trends">
+  <meta property="og:description" content="Stay updated with the latest insights, trends, and news from Kenya's leading property development company. Expert analysis and industry updates.">
+  <meta property="og:image" content="images/blog-hero.jpg">
+  <meta property="og:url" content="https://kenownholdings.com/blog">
+  <meta property="og:type" content="website"><!-- SEO Meta -->
+  <meta name="description" content="Read the latest insights from KenOwn Holdings on property development, construction trends, real estate market analysis, and sustainable building practices in Kenya.">
+  <meta name="keywords" content="Kenya property blog, construction insights, real estate trends, sustainable building, property development news, KenOwn Holdings blog"><!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"><!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- Elements SDK -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --gold: #D4AF37;
+            --dark-blue: #1B365D;
+            --white: #FFFFFF;
+            --light-gold: #F4E4BC;
+            --dark-gold: #B8941F;
+            --navy: #0F2A44;
+            --gray-light: #F8F9FA;
+            --gray-dark: #6C757D;
+            --gray-medium: #ADB5BD;
+            --green: #28A745;
+            --blue: #007BFF;
+            --purple: #6F42C1;
+            --red: #DC3545;
+            --orange: #FD7E14;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-blue);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--dark-blue);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Page Header */
+        .page-header {
+            height: 70vh;
+            background: linear-gradient(135deg, rgba(27, 54, 93, 0.9), rgba(212, 175, 55, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><g fill="%23d4af37" opacity="0.3"><rect x="50" y="50" width="200" height="150"/><rect x="300" y="100" width="150" height="200"/><rect x="500" y="75" width="180" height="120"/><rect x="750" y="120" width="160" height="180"/><rect x="950" y="80" width="140" height="160"/><circle cx="150" cy="400" r="60"/><circle cx="400" cy="450" r="80"/><circle cx="650" cy="420" r="70"/><circle cx="900" cy="460" r="65"/></g></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+            position: relative;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--dark-blue) 0%, var(--gold) 100%);
+            opacity: 0.8;
+            z-index: -1;
+        }
+        
+        .page-header-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            z-index: 1;
+        }
+        
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .page-subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--gray-light);
+            padding: 1rem 0;
+        }
+        
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-nav a {
+            color: var(--gray-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb-nav a:hover {
+            color: var(--gold);
+        }
+        
+        .breadcrumb-nav span {
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Blog Layout */
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            padding: 4rem 0;
+        }
+        
+        .blog-main {
+            /* Main content area */
+        }
+        
+        .blog-sidebar {
+            /* Sidebar area */
+        }
+        
+        /* Featured Article */
+        .featured-article {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 4rem;
+        }
+        
+        .featured-image {
+            height: 400px;
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><rect fill="%23d4af37" width="800" height="400"/><g fill="%23ffffff" opacity="0.1"><rect x="50" y="50" width="100" height="80"/><rect x="200" y="100" width="120" height="60"/><rect x="400" y="75" width="90" height="100"/><rect x="600" y="120" width="110" height="70"/><circle cx="100" cy="300" r="40"/><circle cx="300" cy="320" r="50"/><circle cx="500" cy="310" r="45"/><circle cx="700" cy="330" r="35"/></g></svg>');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .featured-content {
+            padding: 3rem;
+        }
+        
+        .featured-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+        }
+        
+        .featured-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .featured-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .featured-excerpt {
+            font-size: 1.1rem;
+            color: var(--gray-dark);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more-btn:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            gap: 3rem;
+        }
+        
+        .blog-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .blog-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .blog-card-content {
+            padding: 2rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: var(--gray-dark);
+        }
+        
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .blog-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .blog-excerpt {
+            color: var(--gray-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .blog-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-link:hover {
+            color: var(--dark-gold);
+            transform: translateX(5px);
+        }
+        
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .widget-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        /* Search Widget */
+        .search-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid var(--gray-medium);
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .search-btn {
+            background: var(--gold);
+            color: var(--dark-blue);
+            border: none;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .search-btn:hover {
+            background: var(--dark-gold);
+        }
+        
+        /* Categories Widget */
+        .category-list {
+            list-style: none;
+        }
+        
+        .category-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--gray-dark);
+            text-decoration: none;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-light);
+            transition: color 0.3s ease;
+        }
+        
+        .category-list a:hover {
+            color: var(--gold);
+        }
+        
+        .category-count {
+            background: var(--gray-light);
+            color: var(--gray-dark);
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+        
+        /* Recent Posts Widget */
+        .recent-post {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .recent-post:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .recent-image {
+            width: 80px;
+            height: 80px;
+            background: var(--gray-light);
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+        }
+        
+        .recent-content h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .recent-content a {
+            color: var(--dark-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .recent-content a:hover {
+            color: var(--gold);
+        }
+        
+        .recent-date {
+            font-size: 0.8rem;
+            color: var(--gray-dark);
+        }
+        
+        /* Tags Widget */
+        .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        
+        .tag {
+            background: var(--gray-light);
+            color: var(--gray-dark);
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            background: var(--gold);
+            color: var(--dark-blue);
+        }
+        
+        /* Newsletter Widget */
+        .newsletter-form {
+            text-align: center;
+        }
+        
+        .newsletter-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--gray-medium);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .newsletter-btn {
+            width: 100%;
+            background: var(--gold);
+            color: var(--dark-blue);
+            border: none;
+            padding: 0.8rem;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-btn:hover {
+            background: var(--dark-gold);
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 4rem;
+        }
+        
+        .pagination a,
+        .pagination span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination a {
+            background: var(--white);
+            color: var(--gray-dark);
+            border: 2px solid var(--gray-light);
+        }
+        
+        .pagination a:hover,
+        .pagination .current {
+            background: var(--gold);
+            color: var(--dark-blue);
+            border-color: var(--gold);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .footer-social .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social .social-link:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .blog-sidebar {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark-blue);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .page-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .featured-content {
+                padding: 2rem;
+            }
+            
+            .featured-title {
+                font-size: 1.8rem;
+            }
+            
+            .blog-card-content {
+                padding: 1.5rem;
+            }
+            
+            .sidebar-widget {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .featured-image {
+                height: 250px;
+            }
+            
+            .featured-content {
+                padding: 1.5rem;
+            }
+            
+            .featured-title {
+                font-size: 1.5rem;
+            }
+            
+            .blog-image {
+                height: 200px;
+            }
+            
+            .blog-card-content {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigation -->
+  <nav class="navbar">
+   <div class="nav-container">
+    <div class="logo"><img src="images/kenown-logo.png" alt="KenOwn Holdings Logo" onerror="this.src=''; this.alt='KenOwn Logo'; this.style.display='none';">
+     <div class="logo-text">
+      KenOwn Holdings
+     </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="about.html">About Us</a></li>
+     <li><a href="divisions.html">Our Divisions</a></li>
+     <li><a href="projects.html">Projects</a></li>
+     <li><a href="blog.html" class="active">Blog</a></li>
+     <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu" id="mobileMenu"><i class="fas fa-bars"></i>
+    </div>
+   </div>
+  </nav><!-- Page Header -->
+  <section class="page-header">
+   <div class="page-header-content">
+    <h1 class="page-title" id="pageTitle">KenOwn Holdings Blog</h1>
+    <p class="page-subtitle" id="pageSubtitle">Insights, trends, and updates from Kenya's leading property developers</p>
+   </div>
+  </section><!-- Breadcrumb -->
+  <section class="breadcrumb">
+   <div class="breadcrumb-container">
+    <nav class="breadcrumb-nav"><a href="index.html"><i class="fas fa-home"></i> Home</a> <i class="fas fa-chevron-right"></i> <span>Blog</span>
+    </nav>
+   </div>
+  </section><!-- Blog Content -->
+  <section class="blog-section">
+   <div class="container">
+    <div class="blog-layout"><!-- Main Content -->
+     <main class="blog-main"><!-- Featured Article -->
+      <article class="featured-article" data-aos="fade-up">
+       <div class="featured-image">
+        <div class="featured-badge">
+         Featured
+        </div>
+       </div>
+       <div class="featured-content">
+        <div class="featured-meta"><span><i class="fas fa-calendar"></i> December 15, 2024</span> <span><i class="fas fa-user"></i> Kenneth Owino</span> <span><i class="fas fa-tag"></i> Sustainability</span> <span><i class="fas fa-clock"></i> 8 min read</span>
+        </div>
+        <h2 class="featured-title" id="featuredTitle">The Future of Sustainable Construction in Kenya</h2>
+        <p class="featured-excerpt">As Kenya continues to urbanize rapidly, the construction industry faces unprecedented challenges and opportunities. At KenOwn Holdings, we're pioneering sustainable building practices that not only reduce environmental impact but also create long-term value for our clients. From green building materials to energy-efficient designs, discover how we're shaping the future of construction in East Africa.</p><a href="#" class="read-more-btn"> Read Full Article <i class="fas fa-arrow-right"></i> </a>
+       </div>
+      </article><!-- Blog Grid -->
+      <div class="blog-grid"><!-- Blog Post 1 -->
+       <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="blog-image" style="background: linear-gradient(135deg, var(--blue), var(--purple)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 250&quot;><rect fill=&quot;%23007BFF&quot; width=&quot;400&quot; height=&quot;250&quot;/><g fill=&quot;%23ffffff&quot; opacity=&quot;0.2&quot;><rect x=&quot;50&quot; y=&quot;50&quot; width=&quot;80&quot; height=&quot;60&quot;/><rect x=&quot;150&quot; y=&quot;70&quot; width=&quot;100&quot; height=&quot;40&quot;/><rect x=&quot;270&quot; y=&quot;60&quot; width=&quot;70&quot; height=&quot;70&quot;/><circle cx=&quot;100&quot; cy=&quot;180&quot; r=&quot;30&quot;/><circle cx=&quot;200&quot; cy=&quot;190&quot; r=&quot;25&quot;/><circle cx=&quot;300&quot; cy=&quot;170&quot; r=&quot;35&quot;/></g></svg>');">
+         <div class="blog-category">
+          Market Analysis
+         </div>
+        </div>
+        <div class="blog-card-content">
+         <div class="blog-meta"><span><i class="fas fa-calendar"></i> Dec 12, 2024</span> <span><i class="fas fa-user"></i> Sarah Wanjiku</span> <span><i class="fas fa-clock"></i> 6 min</span>
+         </div>
+         <h3>Kenya's Real Estate Market: 2024 Year-End Review</h3>
+         <p class="blog-excerpt">A comprehensive analysis of Kenya's property market performance in 2024, including price trends, investment opportunities, and regional growth patterns. Our experts break down the key factors driving market dynamics.</p><a href="#" class="blog-link"> Read More <i class="fas fa-arrow-right"></i> </a>
+        </div>
+       </article><!-- Blog Post 2 -->
+       <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="blog-image" style="background: linear-gradient(135deg, var(--green), var(--blue)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 250&quot;><rect fill=&quot;%2328A745&quot; width=&quot;400&quot; height=&quot;250&quot;/><g fill=&quot;%23ffffff&quot; opacity=&quot;0.2&quot;><polygon points=&quot;50,50 150,50 100,150&quot;/><polygon points=&quot;200,60 300,60 250,140&quot;/><rect x=&quot;80&quot; y=&quot;170&quot; width=&quot;60&quot; height=&quot;60&quot;/><rect x=&quot;200&quot; y=&quot;160&quot; width=&quot;80&quot; height=&quot;70&quot;/><rect x=&quot;300&quot; y=&quot;180&quot; width=&quot;50&quot; height=&quot;50&quot;/></g></svg>');">
+         <div class="blog-category">
+          Construction
+         </div>
+        </div>
+        <div class="blog-card-content">
+         <div class="blog-meta"><span><i class="fas fa-calendar"></i> Dec 10, 2024</span> <span><i class="fas fa-user"></i> David Kimani</span> <span><i class="fas fa-clock"></i> 5 min</span>
+         </div>
+         <h3>Innovative Building Materials Transforming Kenyan Construction</h3>
+         <p class="blog-excerpt">Explore the latest building materials and technologies we're implementing in our projects. From locally-sourced sustainable materials to cutting-edge construction techniques that reduce costs and improve quality.</p><a href="#" class="blog-link"> Read More <i class="fas fa-arrow-right"></i> </a>
+        </div>
+       </article><!-- Blog Post 3 -->
+       <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="blog-image" style="background: linear-gradient(135deg, var(--orange), var(--red)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 250&quot;><rect fill=&quot;%23FD7E14&quot; width=&quot;400&quot; height=&quot;250&quot;/><g fill=&quot;%23ffffff&quot; opacity=&quot;0.2&quot;><rect x=&quot;30&quot; y=&quot;30&quot; width=&quot;120&quot; height=&quot;80&quot;/><rect x=&quot;170&quot; y=&quot;50&quot; width=&quot;100&quot; height=&quot;60&quot;/><rect x=&quot;290&quot; y=&quot;40&quot; width=&quot;80&quot; height=&quot;90&quot;/><circle cx=&quot;80&quot; cy=&quot;180&quot; r=&quot;40&quot;/><circle cx=&quot;220&quot; cy=&quot;170&quot; r=&quot;30&quot;/><circle cx=&quot;320&quot; cy=&quot;190&quot; r=&quot;35&quot;/></g></svg>');">
+         <div class="blog-category">
+          Investment
+         </div>
+        </div>
+        <div class="blog-card-content">
+         <div class="blog-meta"><span><i class="fas fa-calendar"></i> Dec 8, 2024</span> <span><i class="fas fa-user"></i> Mary Njeri</span> <span><i class="fas fa-clock"></i> 7 min</span>
+         </div>
+         <h3>Smart Investment Strategies for Kenyan Property Buyers</h3>
+         <p class="blog-excerpt">Navigate the complexities of property investment in Kenya with our expert guide. Learn about emerging markets, financing options, and how to maximize returns on your real estate investments.</p><a href="#" class="blog-link"> Read More <i class="fas fa-arrow-right"></i> </a>
+        </div>
+       </article><!-- Blog Post 4 -->
+       <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="blog-image" style="background: linear-gradient(135deg, var(--purple), var(--blue)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 250&quot;><rect fill=&quot;%236F42C1&quot; width=&quot;400&quot; height=&quot;250&quot;/><g fill=&quot;%23ffffff&quot; opacity=&quot;0.2&quot;><rect x=&quot;40&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;70&quot;/><rect x=&quot;150&quot; y=&quot;30&quot; width=&quot;110&quot; height=&quot;80&quot;/><rect x=&quot;280&quot; y=&quot;50&quot; width=&quot;80&quot; height=&quot;60&quot;/><polygon points=&quot;70,150 120,150 95,200&quot;/><polygon points=&quot;200,160 250,160 225,210&quot;/><polygon points=&quot;310,140 360,140 335,190&quot;/></g></svg>');">
+         <div class="blog-category">
+          Technology
+         </div>
+        </div>
+        <div class="blog-card-content">
+         <div class="blog-meta"><span><i class="fas fa-calendar"></i> Dec 5, 2024</span> <span><i class="fas fa-user"></i> Kenneth Owino</span> <span><i class="fas fa-clock"></i> 6 min</span>
+         </div>
+         <h3>Digital Transformation in Property Development</h3>
+         <p class="blog-excerpt">How KenOwn Holdings is leveraging technology to streamline project management, enhance client experience, and improve construction efficiency. From BIM modeling to virtual property tours.</p><a href="#" class="blog-link"> Read More <i class="fas fa-arrow-right"></i> </a>
+        </div>
+       </article><!-- Blog Post 5 -->
+       <article class="blog-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="blog-image" style="background: linear-gradient(135deg, var(--gold), var(--orange)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 250&quot;><rect fill=&quot;%23D4AF37&quot; width=&quot;400&quot; height=&quot;250&quot;/><g fill=&quot;%23ffffff&quot; opacity=&quot;0.2&quot;><circle cx=&quot;80&quot; cy=&quot;80&quot; r=&quot;40&quot;/><circle cx=&quot;200&quot; cy=&quot;70&quot; r=&quot;50&quot;/><circle cx=&quot;320&quot; cy=&quot;90&quot; r=&quot;35&quot;/><rect x=&quot;50&quot; y=&quot;150&quot; width=&quot;80&quot; height=&quot;60&quot;/><rect x=&quot;170&quot; y=&quot;160&quot; width=&quot;100&quot; height=&quot;50&quot;/><rect x=&quot;290&quot; y=&quot;170&quot; width=&quot;70&quot; height=&quot;70&quot;/></g></svg>');">
+         <div class="blog-category">
+          Community
+         </div>
+        </div>
+        <div class="blog-card-content">
+         <div class="blog-meta"><span><i class="fas fa-calendar"></i> Dec 3, 2024</span> <span><i class="fas fa-user"></i> Sarah Wanjiku</span> <span><i class="fas fa-clock"></i> 4 min</span>
+         </div>
+         <h3>Building Communities: Our Social Impact Initiatives</h3>
+         <p class="blog-excerpt">Beyond construction, KenOwn Holdings is committed to community development. Learn about our education programs, local employment initiatives, and sustainable community projects across Kenya.</p><a href="#" class="blog-link"> Read More <i class="fas fa-arrow-right"></i> </a>
+        </div>
+       </article><!-- Blog Post 6 -->
+       <article class="blog-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="blog-image" style="background: linear-gradient(135deg, var(--red), var(--purple)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 250&quot;><rect fill=&quot;%23DC3545&quot; width=&quot;400&quot; height=&quot;250&quot;/><g fill=&quot;%23ffffff&quot; opacity=&quot;0.2&quot;><rect x=&quot;30&quot; y=&quot;50&quot; width=&quot;100&quot; height=&quot;80&quot;/><rect x=&quot;150&quot; y=&quot;40&quot; width=&quot;120&quot; height=&quot;70&quot;/><rect x=&quot;290&quot; y=&quot;60&quot; width=&quot;80&quot; height=&quot;90&quot;/><triangle points=&quot;80,160 130,160 105,210&quot;/><triangle points=&quot;200,150 250,150 225,200&quot;/><triangle points=&quot;320,170 370,170 345,220&quot;/></g></svg>');">
+         <div class="blog-category">
+          Regulations
+         </div>
+        </div>
+        <div class="blog-card-content">
+         <div class="blog-meta"><span><i class="fas fa-calendar"></i> Nov 30, 2024</span> <span><i class="fas fa-user"></i> David Kimani</span> <span><i class="fas fa-clock"></i> 8 min</span>
+         </div>
+         <h3>Navigating Kenya's Building Codes and Regulations</h3>
+         <p class="blog-excerpt">Stay compliant with Kenya's evolving building regulations. Our comprehensive guide covers recent updates to building codes, permit processes, and compliance requirements for property developers.</p><a href="#" class="blog-link"> Read More <i class="fas fa-arrow-right"></i> </a>
+        </div>
+       </article>
+      </div><!-- Pagination -->
+      <div class="pagination"><a href="#" aria-label="Previous page"><i class="fas fa-chevron-left"></i></a> <span class="current">1</span> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#" aria-label="Next page"><i class="fas fa-chevron-right"></i></a>
+      </div>
+     </main><!-- Sidebar -->
+     <aside class="blog-sidebar"><!-- Search Widget -->
+      <div class="sidebar-widget" data-aos="fade-up">
+       <h3 class="widget-title">Search Articles</h3>
+       <form class="search-form"><input type="text" class="search-input" placeholder="Search blog posts..."> <button type="submit" class="search-btn"> <i class="fas fa-search"></i> </button>
+       </form>
+      </div><!-- Categories Widget -->
+      <div class="sidebar-widget" data-aos="fade-up" data-aos-delay="100">
+       <h3 class="widget-title">Categories</h3>
+       <ul class="category-list">
+        <li><a href="#">Market Analysis <span class="category-count">12</span></a></li>
+        <li><a href="#">Construction <span class="category-count">18</span></a></li>
+        <li><a href="#">Investment <span class="category-count">15</span></a></li>
+        <li><a href="#">Technology <span class="category-count">8</span></a></li>
+        <li><a href="#">Sustainability <span class="category-count">10</span></a></li>
+        <li><a href="#">Community <span class="category-count">6</span></a></li>
+        <li><a href="#">Regulations <span class="category-count">9</span></a></li>
+       </ul>
+      </div><!-- Recent Posts Widget -->
+      <div class="sidebar-widget" data-aos="fade-up" data-aos-delay="200">
+       <h3 class="widget-title">Recent Posts</h3>
+       <div class="recent-posts">
+        <div class="recent-post">
+         <div class="recent-image" style="background: linear-gradient(135deg, var(--gold), var(--dark-gold));"></div>
+         <div class="recent-content">
+          <h4><a href="#">Affordable Housing Solutions for Urban Kenya</a></h4>
+          <div class="recent-date">
+           December 1, 2024
+          </div>
+         </div>
+        </div>
+        <div class="recent-post">
+         <div class="recent-image" style="background: linear-gradient(135deg, var(--blue), var(--purple));"></div>
+         <div class="recent-content">
+          <h4><a href="#">Climate-Resilient Building Design Trends</a></h4>
+          <div class="recent-date">
+           November 28, 2024
+          </div>
+         </div>
+        </div>
+        <div class="recent-post">
+         <div class="recent-image" style="background: linear-gradient(135deg, var(--green), var(--blue));"></div>
+         <div class="recent-content">
+          <h4><a href="#">Project Spotlight: Nairobi Green Towers</a></h4>
+          <div class="recent-date">
+           November 25, 2024
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Tags Widget -->
+      <div class="sidebar-widget" data-aos="fade-up" data-aos-delay="300">
+       <h3 class="widget-title">Popular Tags</h3>
+       <div class="tags-list"><a href="#" class="tag">Property Development</a> <a href="#" class="tag">Construction</a> <a href="#" class="tag">Real Estate</a> <a href="#" class="tag">Sustainability</a> <a href="#" class="tag">Investment</a> <a href="#" class="tag">Kenya Market</a> <a href="#" class="tag">Green Building</a> <a href="#" class="tag">Urban Planning</a> <a href="#" class="tag">Technology</a> <a href="#" class="tag">Affordable Housing</a>
+       </div>
+      </div><!-- Newsletter Widget -->
+      <div class="sidebar-widget" data-aos="fade-up" data-aos-delay="400">
+       <h3 class="widget-title" id="newsletterTitle">Stay Updated with KenOwn Holdings</h3>
+       <p style="margin-bottom: 1.5rem; color: var(--gray-dark); text-align: center;">Get the latest insights and updates delivered to your inbox.</p>
+       <form class="newsletter-form"><input type="email" class="newsletter-input" placeholder="Enter your email address" required> <button type="submit" class="newsletter-btn">Subscribe Now</button>
+       </form>
+      </div>
+     </aside>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KenOwn Holdings Limited</h3>
+      <p>Transforming Kenya's landscape through innovative property development, construction excellence, and strategic real estate solutions.</p>
+      <p>25+ years of experience with 50+ completed projects across Kenya.</p>
+      <div class="footer-social"><a href="https://facebook.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-f"></i> </a> <a href="https://twitter.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i> </a> <a href="https://instagram.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a> <a href="https://linkedin.com/company/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin-in"></i> </a> <a href="https://youtube.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-youtube"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About Us</a></p>
+      <p><a href="divisions.html">Our Divisions</a></p>
+      <p><a href="projects.html">Projects</a></p>
+      <p><a href="contact.html">Contact</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Our Services</h3>
+      <p><a href="divisions.html#property-development">Property Development</a></p>
+      <p><a href="divisions.html#construction">Construction Services</a></p>
+      <p><a href="divisions.html#real-estate">Real Estate</a></p>
+      <p><a href="divisions.html#project-management">Project Management</a></p>
+      <p><a href="divisions.html#consultancy">Consultancy</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-phone"></i> +254 722 334 455</p>
+      <p><i class="fas fa-envelope"></i> info@kenownholdings.co.ke</p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: +254 722 334 455</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KenOwn Holdings Limited. All rights reserved. | Building Kenya's Future</p>
+    </div>
+   </div>
+  </footer><!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenu').addEventListener('click', () => {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        });
+
+        // Search form handler
+        document.querySelector('.search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = this.querySelector('.search-input').value;
+            if (searchTerm.trim()) {
+                // In a real application, this would perform the search
+                console.log('Searching for:', searchTerm);
+                // Show a message or redirect to search results
+                alert(`Searching for: "${searchTerm}"`);
+            }
+        });
+
+        // Newsletter form handler
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.newsletter-input').value;
+            if (email.trim()) {
+                // In a real application, this would subscribe the user
+                console.log('Newsletter subscription:', email);
+                alert('Thank you for subscribing to our newsletter!');
+                this.reset();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced hover effects for blog cards
+        document.querySelectorAll('.blog-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+                this.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Elements SDK Configuration
+        const defaultConfig = {
+            page_title: "KenOwn Holdings Blog",
+            page_subtitle: "Insights, trends, and updates from Kenya's leading property developers",
+            featured_title: "The Future of Sustainable Construction in Kenya",
+            newsletter_title: "Stay Updated with KenOwn Holdings"
+        };
+
+        async function onConfigChange(config) {
+            // Update page header
+            const pageTitle = document.getElementById('pageTitle');
+            const pageSubtitle = document.getElementById('pageSubtitle');
+            const featuredTitle = document.getElementById('featuredTitle');
+            const newsletterTitle = document.getElementById('newsletterTitle');
+
+            if (pageTitle) pageTitle.textContent = config.page_title || defaultConfig.page_title;
+            if (pageSubtitle) pageSubtitle.textContent = config.page_subtitle || defaultConfig.page_subtitle;
+            if (featuredTitle) featuredTitle.textContent = config.featured_title || defaultConfig.featured_title;
+            if (newsletterTitle) newsletterTitle.textContent = config.newsletter_title || defaultConfig.newsletter_title;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["page_title", config.page_title || defaultConfig.page_title],
+                ["page_subtitle", config.page_subtitle || defaultConfig.page_subtitle],
+                ["featured_title", config.featured_title || defaultConfig.featured_title],
+                ["newsletter_title", config.newsletter_title || defaultConfig.newsletter_title]
+            ]);
+        }
+
+        // Initialize Elements SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99748bf9c49950d4',t:'MTc2MTkyODMyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
