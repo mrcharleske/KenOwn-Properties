@@ -41,42 +41,6 @@
             --navy: #0F2A44;
             --gray-light: #F8F9FA;
             --gray-dark: #6C757D;
-            
-            /* Theme Colors */
-            --primary-bg: #1B365D;
-            --primary-accent: #D4AF37;
-            --primary-light: #F4E4BC;
-        }
-        
-        /* Color Theme Classes */
-        .theme-blue {
-            --primary-bg: #1B365D;
-            --primary-accent: #D4AF37;
-            --primary-light: #F4E4BC;
-        }
-        
-        .theme-green {
-            --primary-bg: #1B4D3E;
-            --primary-accent: #2ECC71;
-            --primary-light: #E8F8F5;
-        }
-        
-        .theme-navy {
-            --primary-bg: #0F2A44;
-            --primary-accent: #3498DB;
-            --primary-light: #EBF5FB;
-        }
-        
-        .theme-purple {
-            --primary-bg: #2C1B47;
-            --primary-accent: #9B59B6;
-            --primary-light: #F4F1F8;
-        }
-        
-        .theme-teal {
-            --primary-bg: #1B4D4D;
-            --primary-accent: #1ABC9C;
-            --primary-light: #E8F8F5;
         }
         
         body {
@@ -99,7 +63,7 @@
         }
         
         .navbar.scrolled {
-            background: var(--primary-bg);
+            background: var(--dark-blue);
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
         
@@ -312,7 +276,7 @@
         
         /* Stats Section */
         .stats {
-            background: var(--primary-bg);
+            background: var(--dark-blue);
             color: var(--white);
             padding: 4rem 0;
         }
@@ -334,7 +298,7 @@
         .stat-number {
             font-size: 3rem;
             font-weight: 800;
-            color: var(--primary-accent);
+            color: var(--gold);
             margin-bottom: 0.5rem;
         }
         
@@ -1122,7 +1086,7 @@
     <div class="cta-content" data-aos="fade-up">
      <h2>Ready to Start Your Property Journey?</h2>
      <p>Join thousands of satisfied clients who chose KenOwn Holdings for their property dreams. Your legacy starts with a single step.</p>
-     <div class="cta-buttons"><a href="contact.html" class="cta-btn-large cta-btn-dark">Get Free Consultation</a> <a href="tel:+254722334455" class="cta-btn-large cta-btn-light">Call Now: +254 722 334 455</a>
+     <div class="cta-buttons"><a href="contact.html" class="cta-btn-large cta-btn-dark">Get Free Consultation</a> <a href="tel:+254700000000" class="cta-btn-large cta-btn-light">Call Now: +254 700 000 000</a>
      </div>
     </div>
    </div>
@@ -1155,25 +1119,18 @@
      </div>
      <div class="footer-section">
       <h3>Contact Info</h3>
-      <p><i class="fas fa-phone"></i> +254 722 334 455</p>
+      <p><i class="fas fa-phone"></i> +254 700 000 000</p>
       <p><i class="fas fa-envelope"></i> info@kenownholdings.co.ke</p>
       <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-      <p><i class="fab fa-whatsapp"></i> WhatsApp: +254 722 334 455</p>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: +254 700 000 000</p>
      </div>
     </div>
     <div class="footer-bottom">
      <p>© 2024 KenOwn Holdings Limited. All rights reserved. | Building Kenyan Dreams Since 2009</p>
     </div>
    </div>
-  </footer><!-- Theme Selector Widget -->
-  <div class="theme-selector" style="position: fixed; top: 50%; left: 2rem; transform: translateY(-50%); z-index: 1000; background: rgba(255,255,255,0.9); padding: 1rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
-   <div style="text-align: center; margin-bottom: 1rem; font-weight: 600; color: var(--dark-blue); font-size: 0.9rem;">
-    Color Theme
-   </div>
-   <div style="display: flex; flex-direction: column; gap: 0.5rem;"><button onclick="changeTheme('blue')" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; cursor: pointer; background: #1B365D; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;" title="Classic Blue"></button> <button onclick="changeTheme('green')" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; cursor: pointer; background: #1B4D3E; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;" title="Forest Green"></button> <button onclick="changeTheme('navy')" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; cursor: pointer; background: #0F2A44; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;" title="Deep Navy"></button> <button onclick="changeTheme('purple')" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; cursor: pointer; background: #2C1B47; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;" title="Royal Purple"></button> <button onclick="changeTheme('teal')" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; cursor: pointer; background: #1B4D4D; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;" title="Ocean Teal"></button>
-   </div>
-  </div><!-- WhatsApp Widget -->
-  <div class="whatsapp-widget"><a href="https://wa.me/254722334455?text=Hi%20KenOwn%20Holdings,%20I'm%20interested%20in%20learning%20more%20about%20your%20properties" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp"> <i class="fab fa-whatsapp"></i> </a>
+  </footer><!-- WhatsApp Widget -->
+  <div class="whatsapp-widget"><a href="https://wa.me/254700000000?text=Hi%20KenOwn%20Holdings,%20I'm%20interested%20in%20learning%20more%20about%20your%20properties" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp"> <i class="fab fa-whatsapp"></i> </a>
   </div><!-- Inquiry Modal -->
   <div id="inquiryModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center;">
    <div style="background: white; padding: 2rem; border-radius: 15px; max-width: 500px; width: 90%; max-height: 90%; overflow-y: auto;">
@@ -1322,124 +1279,10 @@
             }
         });
 
-        // Theme Changer Function
-        function changeTheme(theme) {
-            const body = document.body;
-            
-            // Remove existing theme classes
-            body.classList.remove('theme-blue', 'theme-green', 'theme-navy', 'theme-purple', 'theme-teal');
-            
-            // Add new theme class
-            body.classList.add(`theme-${theme}`);
-            
-            // Add smooth transition effect
-            body.style.transition = 'all 0.5s ease';
-            
-            // Store theme preference
-            localStorage.setItem('kenown-theme', theme);
-            
-            // Add visual feedback
-            const buttons = document.querySelectorAll('.theme-selector button');
-            buttons.forEach(btn => {
-                btn.style.transform = 'scale(1)';
-                btn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.2)';
-            });
-            
-            // Highlight selected theme
-            event.target.style.transform = 'scale(1.2)';
-            event.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.4)';
-        }
-
-        // Load saved theme on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('kenown-theme') || 'blue';
-            document.body.classList.add(`theme-${savedTheme}`);
-        });
-
-        // Enhanced scroll animations
-        let ticking = false;
-        
-        function updateScrollAnimations() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            
-            // Parallax effect for hero background
-            const heroSlides = document.querySelectorAll('.hero-slide');
-            heroSlides.forEach(slide => {
-                slide.style.transform = `translateY(${rate}px)`;
-            });
-            
-            ticking = false;
-        }
-        
-        function requestScrollUpdate() {
-            if (!ticking) {
-                requestAnimationFrame(updateScrollAnimations);
-                ticking = true;
-            }
-        }
-        
-        window.addEventListener('scroll', requestScrollUpdate);
-
-        // Enhanced hover effects for cards
-        document.querySelectorAll('.division-card, .project-card, .testimonial-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-15px) scale(1.02)';
-                this.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Animated counter for stats
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            const speed = 200;
-            
-            counters.forEach(counter => {
-                const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
-                const increment = target / speed;
-                let current = 0;
-                
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        counter.textContent = counter.textContent.replace(/[0-9]+/, target);
-                        clearInterval(timer);
-                    } else {
-                        counter.textContent = counter.textContent.replace(/[0-9]+/, Math.ceil(current));
-                    }
-                }, 1);
-            });
-        }
-
-        // Trigger counter animation when stats section is visible
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        });
-
-        const statsSection = document.querySelector('.stats');
-        if (statsSection) {
-            statsObserver.observe(statsSection);
-        }
-
-        // Mobile menu toggle (enhanced)
+        // Mobile menu toggle (basic implementation)
         document.getElementById('mobileMenu').addEventListener('click', () => {
             const navLinks = document.querySelector('.nav-links');
-            const isVisible = navLinks.style.display === 'flex';
-            
-            navLinks.style.display = isVisible ? 'none' : 'flex';
-            
-            if (!isVisible) {
-                navLinks.style.animation = 'slideDown 0.3s ease-out';
-            }
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
 
         // Smooth scrolling for anchor links
@@ -1455,38 +1298,6 @@
                 }
             });
         });
-
-        // Add floating animation to theme selector
-        const themeSelector = document.querySelector('.theme-selector');
-        if (themeSelector) {
-            themeSelector.style.animation = 'float 3s ease-in-out infinite';
-        }
-
-        // Add CSS for additional animations
-        const additionalStyles = `
-            @keyframes slideDown {
-                from { opacity: 0; transform: translateY(-20px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-            
-            @keyframes float {
-                0%, 100% { transform: translateY(-50%) translateX(0); }
-                50% { transform: translateY(-50%) translateX(5px); }
-            }
-            
-            .theme-selector button:hover {
-                transform: scale(1.15) !important;
-                box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important;
-            }
-            
-            .hero-slide {
-                transition: transform 0.1s ease-out;
-            }
-        `;
-        
-        const styleSheet = document.createElement('style');
-        styleSheet.textContent = additionalStyles;
-        document.head.appendChild(styleSheet);
 
         // Elements SDK Configuration
         const defaultConfig = {
@@ -1553,5 +1364,5 @@
             });
         }
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'996d25d394a9793a',t:'MTc2MTg1MDc0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'996d093fa1854eb9',t:'MTc2MTg0OTU3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
