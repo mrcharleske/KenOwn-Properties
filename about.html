@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - KenOwn Holdings Limited | Building Dreams Since 2009</title><!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/kenown-logo.png"><!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="About KenOwn Holdings Limited - 15 Years of Excellence">
+  <meta property="og:description" content="Learn about KenOwn Holdings' journey from a small startup to Kenya's trusted property development company. Meet our team and discover our mission.">
+  <meta property="og:image" content="images/kenown-team.jpg">
+  <meta property="og:url" content="https://kenownholdings.com/about">
+  <meta property="og:type" content="website"><!-- SEO Meta -->
+  <meta name="description" content="Discover KenOwn Holdings Limited's story - 15 years of excellence in Kenyan property development, real estate, and construction. Meet our leadership team and learn about our mission to empower Kenyan property ownership.">
+  <meta name="keywords" content="KenOwn Holdings history, Kenya property company, real estate leadership team, property development mission, Kenyan construction company"><!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"><!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- Elements SDK -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --gold: #D4AF37;
+            --dark-blue: #1B365D;
+            --white: #FFFFFF;
+            --light-gold: #F4E4BC;
+            --dark-gold: #B8941F;
+            --navy: #0F2A44;
+            --gray-light: #F8F9FA;
+            --gray-dark: #6C757D;
+            --gray-medium: #ADB5BD;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-blue);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--dark-blue);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Page Header */
+        .page-header {
+            height: 60vh;
+            background: linear-gradient(135deg, rgba(27, 54, 93, 0.9), rgba(212, 175, 55, 0.7)), url('images/about-hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+        
+        .page-header-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .page-subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--gray-light);
+            padding: 1rem 0;
+        }
+        
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-nav a {
+            color: var(--gray-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb-nav a:hover {
+            color: var(--gold);
+        }
+        
+        .breadcrumb-nav span {
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 6rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-dark);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Company Story */
+        .company-story {
+            background: var(--white);
+        }
+        
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .story-text h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .story-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .story-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        /* Timeline */
+        .timeline-section {
+            background: var(--gray-light);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gold);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 45%;
+            position: relative;
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--gold);
+            color: var(--dark-blue);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            z-index: 10;
+        }
+        
+        .timeline-content h3 {
+            color: var(--dark-blue);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content p {
+            color: var(--gray-dark);
+            line-height: 1.6;
+        }
+        
+        /* Mission & Vision */
+        .mission-vision {
+            background: var(--dark-blue);
+            color: var(--white);
+        }
+        
+        .mission-vision .section-title {
+            color: var(--white);
+        }
+        
+        .mission-vision .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .mission-card,
+        .vision-card {
+            background: rgba(255,255,255,0.1);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .mission-card .icon,
+        .vision-card .icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+        
+        .mission-card .icon i,
+        .vision-card .icon i {
+            font-size: 2rem;
+            color: var(--dark-blue);
+        }
+        
+        .mission-card h3,
+        .vision-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+        
+        .mission-card p,
+        .vision-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Values */
+        .values-section {
+            background: var(--white);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .value-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--gold);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .value-icon i {
+            font-size: 1.8rem;
+            color: var(--dark-blue);
+        }
+        
+        .value-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .value-card p {
+            color: var(--gray-dark);
+            line-height: 1.6;
+        }
+        
+        /* Leadership Team */
+        .leadership-section {
+            background: var(--gray-light);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .team-member {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .member-photo {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .member-info {
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-title {
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .member-bio {
+            color: var(--gray-dark);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--light-gold);
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--gold);
+            transform: translateY(-2px);
+        }
+        
+        /* Stats */
+        .stats-section {
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 4rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 0;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-btn-primary {
+            background: var(--gold);
+            color: var(--dark-blue);
+        }
+        
+        .cta-btn-primary:hover {
+            background: var(--dark-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .cta-btn-secondary:hover {
+            background: var(--white);
+            color: var(--dark-blue);
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .footer-social .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social .social-link:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+        
+        /* WhatsApp Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+        
+        .whatsapp-btn {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Animations */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .page-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .timeline::before {
+                left: 2rem;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                padding-left: 4rem;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-year {
+                left: 2rem;
+            }
+            
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-widget {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigation -->
+  <nav class="navbar">
+   <div class="nav-container">
+    <div class="logo"><img src="images/kenown-logo.png" alt="KenOwn Holdings Logo" onerror="this.src=''; this.alt='KenOwn Logo'; this.style.display='none';">
+     <div class="logo-text" id="companyName">
+      KenOwn Holdings
+     </div>
+    </div>
+    <ul class="nav-links">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="about.html" class="active">About Us</a></li>
+     <li><a href="divisions.html">Our Divisions</a></li>
+     <li><a href="projects.html">Projects</a></li>
+     <li><a href="blog.html">Blog</a></li>
+     <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu" id="mobileMenu"><i class="fas fa-bars"></i>
+    </div>
+   </div>
+  </nav><!-- Page Header -->
+  <section class="page-header">
+   <div class="page-header-content">
+    <h1 class="page-title" id="aboutHeroTitle">Our Story of Excellence</h1>
+    <p class="page-subtitle" id="aboutHeroSubtitle">15 Years of Building Dreams Across Kenya</p>
+   </div>
+  </section><!-- Breadcrumb -->
+  <section class="breadcrumb">
+   <div class="breadcrumb-container">
+    <nav class="breadcrumb-nav"><a href="index.html"><i class="fas fa-home"></i> Home</a> <i class="fas fa-chevron-right"></i> <span>About Us</span>
+    </nav>
+   </div>
+  </section><!-- Company Story -->
+  <section class="section company-story">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title" id="companyTagline">Building Dreams, Creating Legacies</h2>
+     <p class="section-subtitle">From humble beginnings to becoming Kenya's most trusted property development company</p>
+    </div>
+    <div class="story-content">
+     <div class="story-text" data-aos="fade-right">
+      <h3>The KenOwn Story</h3>
+      <p>Founded in 2009 with a simple yet powerful vision: to make property ownership accessible to every Kenyan family. What started as a small real estate consultancy has grown into one of Kenya's most respected property development companies.</p>
+      <p>Our founder, driven by the belief that every Kenyan deserves to own a piece of their homeland, started KenOwn Holdings with just three employees and an unwavering commitment to transparency, quality, and customer satisfaction.</p>
+      <p>Today, we've helped over 1,000 families achieve their property dreams, developed more than 500 properties across Kenya, and continue to set new standards in the real estate industry.</p>
+     </div>
+     <div class="story-image" data-aos="fade-left"><img src="images/company-story.jpg" alt="KenOwn Holdings Journey" onerror="this.src=''; this.alt='Our Company Journey'; this.style.display='none';">
+     </div>
+    </div>
+   </div>
+  </section><!-- Timeline -->
+  <section class="section timeline-section">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Our Journey Through Time</h2>
+     <p class="section-subtitle">Key milestones that shaped KenOwn Holdings into the company we are today</p>
+    </div>
+    <div class="timeline">
+     <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+      <div class="timeline-content">
+       <h3>The Beginning</h3>
+       <p>KenOwn Holdings Limited was founded with a mission to democratize property ownership in Kenya. Started with 3 employees and big dreams.</p>
+      </div>
+      <div class="timeline-year">
+       2009
+      </div>
+     </div>
+     <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+      <div class="timeline-content">
+       <h3>First Major Project</h3>
+       <p>Completed our first residential development in Kiambu, delivering 50 affordable housing units to Kenyan families.</p>
+      </div>
+      <div class="timeline-year">
+       2012
+      </div>
+     </div>
+     <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+      <div class="timeline-content">
+       <h3>Expansion to Coast</h3>
+       <p>Opened our Mombasa office and launched our first coastal property development, expanding our reach across Kenya.</p>
+      </div>
+      <div class="timeline-year">
+       2015
+      </div>
+     </div>
+     <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+      <div class="timeline-content">
+       <h3>1000th Family Milestone</h3>
+       <p>Celebrated helping our 1000th family achieve property ownership, marking a significant milestone in our journey.</p>
+      </div>
+      <div class="timeline-year">
+       2018
+      </div>
+     </div>
+     <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+      <div class="timeline-content">
+       <h3>Digital Innovation</h3>
+       <p>Launched our digital platform, making it easier for diaspora Kenyans to invest in property from anywhere in the world.</p>
+      </div>
+      <div class="timeline-year">
+       2021
+      </div>
+     </div>
+     <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+      <div class="timeline-content">
+       <h3>Sustainable Future</h3>
+       <p>Committed to sustainable development practices and launched our green building initiative for environmentally conscious construction.</p>
+      </div>
+      <div class="timeline-year">
+       2024
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Mission & Vision -->
+  <section class="section mission-vision">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Our Purpose &amp; Direction</h2>
+     <p class="section-subtitle">The driving forces behind everything we do at KenOwn Holdings</p>
+    </div>
+    <div class="mission-vision-grid">
+     <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="icon"><i class="fas fa-bullseye"></i>
+      </div>
+      <h3 id="missionTitle">Our Mission</h3>
+      <p>To empower every Kenyan family to achieve property ownership through transparent, affordable, and quality real estate solutions that create lasting legacies for generations to come.</p>
+     </div>
+     <div class="vision-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="icon"><i class="fas fa-eye"></i>
+      </div>
+      <h3 id="visionTitle">Our Vision</h3>
+      <p>To be Kenya's leading property development company, recognized for transforming communities, creating opportunities, and making the dream of homeownership a reality for every Kenyan.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Core Values -->
+  <section class="section values-section">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Our Core Values</h2>
+     <p class="section-subtitle">The principles that guide our decisions and shape our company culture</p>
+    </div>
+    <div class="values-grid">
+     <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="value-icon"><i class="fas fa-handshake"></i>
+      </div>
+      <h3>Integrity</h3>
+      <p>We conduct business with honesty, transparency, and ethical practices in every transaction and relationship.</p>
+     </div>
+     <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="value-icon"><i class="fas fa-award"></i>
+      </div>
+      <h3>Excellence</h3>
+      <p>We strive for the highest standards in construction quality, customer service, and project delivery.</p>
+     </div>
+     <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="value-icon"><i class="fas fa-users"></i>
+      </div>
+      <h3>Customer Focus</h3>
+      <p>Our clients' dreams and satisfaction are at the center of everything we do, from planning to completion.</p>
+     </div>
+     <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="value-icon"><i class="fas fa-lightbulb"></i>
+      </div>
+      <h3>Innovation</h3>
+      <p>We embrace new technologies and creative solutions to improve our services and customer experience.</p>
+     </div>
+     <div class="value-card" data-aos="fade-up" data-aos-delay="500">
+      <div class="value-icon"><i class="fas fa-heart"></i>
+      </div>
+      <h3>Community</h3>
+      <p>We're committed to building stronger communities and contributing to Kenya's economic development.</p>
+     </div>
+     <div class="value-card" data-aos="fade-up" data-aos-delay="600">
+      <div class="value-icon"><i class="fas fa-leaf"></i>
+      </div>
+      <h3>Sustainability</h3>
+      <p>We prioritize environmentally responsible practices in all our development projects.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Leadership Team -->
+  <section class="section leadership-section">
+   <div class="container">
+    <div class="section-header" data-aos="fade-up">
+     <h2 class="section-title">Meet Our Leadership Team</h2>
+     <p class="section-subtitle">Experienced professionals dedicated to making your property dreams a reality</p>
+    </div>
+    <div class="team-grid">
+     <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+      <div class="member-photo" style="background-image: url('images/ceo-photo.jpg')"></div>
+      <div class="member-info">
+       <h3 class="member-name">James Mwangi</h3>
+       <p class="member-title">Chief Executive Officer</p>
+       <p class="member-bio">With over 20 years in real estate development, James founded KenOwn Holdings with a vision to make property ownership accessible to all Kenyans.</p>
+       <div class="member-social"><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+       </div>
+      </div>
+     </div>
+     <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+      <div class="member-photo" style="background-image: url('images/coo-photo.jpg')"></div>
+      <div class="member-info">
+       <h3 class="member-name">Sarah Achieng</h3>
+       <p class="member-title">Chief Operations Officer</p>
+       <p class="member-bio">Sarah oversees all operational aspects of our developments, ensuring quality delivery and customer satisfaction across all projects.</p>
+       <div class="member-social"><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+       </div>
+      </div>
+     </div>
+     <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+      <div class="member-photo" style="background-image: url('images/cto-photo.jpg')"></div>
+      <div class="member-info">
+       <h3 class="member-name">David Kipchoge</h3>
+       <p class="member-title">Head of Development</p>
+       <p class="member-bio">David leads our construction and development teams, bringing innovative building techniques and sustainable practices to every project.</p>
+       <div class="member-social"><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Company Stats -->
+  <section class="stats-section">
+   <div class="container">
+    <div class="stats-grid">
+     <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+      <div class="stat-number">
+       1000+
+      </div>
+      <div class="stat-label">
+       Happy Families
+      </div>
+     </div>
+     <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+      <div class="stat-number">
+       15
+      </div>
+      <div class="stat-label">
+       Years Experience
+      </div>
+     </div>
+     <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+      <div class="stat-number">
+       500+
+      </div>
+      <div class="stat-label">
+       Properties Delivered
+      </div>
+     </div>
+     <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+      <div class="stat-number">
+       50+
+      </div>
+      <div class="stat-label">
+       Ongoing Projects
+      </div>
+     </div>
+     <div class="stat-item" data-aos="fade-up" data-aos-delay="500">
+      <div class="stat-number">
+       25
+      </div>
+      <div class="stat-label">
+       Expert Team Members
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- CTA Section -->
+  <section class="cta-section">
+   <div class="container">
+    <div class="cta-content" data-aos="fade-up">
+     <h2>Ready to Join Our Success Story?</h2>
+     <p>Become part of the KenOwn Holdings family and let us help you achieve your property dreams in Kenya.</p>
+     <div class="cta-buttons"><a href="contact.html" class="cta-btn cta-btn-primary">Start Your Journey</a> <a href="projects.html" class="cta-btn cta-btn-secondary">View Our Projects</a>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>KenOwn Holdings Limited</h3>
+      <p>Empowering Kenyan Ownership in Property, Development &amp; Real Estate.</p>
+      <p>Building dreams and creating legacies across Kenya for over 15 years.</p>
+      <div class="footer-social"><a href="https://facebook.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook-f"></i> </a> <a href="https://twitter.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i> </a> <a href="https://instagram.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a> <a href="https://linkedin.com/company/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin-in"></i> </a> <a href="https://youtube.com/kenownholdings" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-youtube"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Our Services</h3>
+      <p><a href="divisions.html#properties">Property Sales &amp; Management</a></p>
+      <p><a href="divisions.html#developers">Construction &amp; Development</a></p>
+      <p><a href="divisions.html#realestate">Real Estate Consultancy</a></p>
+      <p><a href="projects.html">Investment Opportunities</a></p>
+      <p><a href="contact.html">Property Valuation</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="projects.html">Current Projects</a></p>
+      <p><a href="blog.html">Investment Tips</a></p>
+      <p><a href="contact.html">Contact Us</a></p>
+      <p><a href="contact.html">Schedule Viewing</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-phone"></i> +254 722 334 455</p>
+      <p><i class="fas fa-envelope"></i> info@kenownholdings.co.ke</p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: +254 722 334 455</p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 KenOwn Holdings Limited. All rights reserved. | Building Kenyan Dreams Since 2009</p>
+    </div>
+   </div>
+  </footer><!-- WhatsApp Widget -->
+  <div class="whatsapp-widget"><a href="https://wa.me/254722334455?text=Hi%20KenOwn%20Holdings,%20I'd%20like%20to%20learn%20more%20about%20your%20company%20and%20services" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp"> <i class="fab fa-whatsapp"></i> </a>
+  </div><!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenu').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            const isVisible = navLinks.style.display === 'flex';
+            navLinks.style.display = isVisible ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced hover effects for cards
+        document.querySelectorAll('.value-card, .team-member').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+                this.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Animated counter for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
+                const increment = target / speed;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = counter.textContent.replace(/[0-9]+/, target);
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = counter.textContent.replace(/[0-9]+/, Math.ceil(current));
+                    }
+                }, 1);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Elements SDK Configuration
+        const defaultConfig = {
+            company_name: "KenOwn Holdings Limited",
+            company_tagline: "Building Dreams, Creating Legacies",
+            about_hero_title: "Our Story of Excellence",
+            about_hero_subtitle: "15 Years of Building Dreams Across Kenya",
+            mission_title: "Our Mission",
+            vision_title: "Our Vision"
+        };
+
+        async function onConfigChange(config) {
+            // Update company name in logo
+            const companyName = document.getElementById('companyName');
+            if (companyName) {
+                companyName.textContent = config.company_name || defaultConfig.company_name;
+            }
+
+            // Update page header
+            const aboutHeroTitle = document.getElementById('aboutHeroTitle');
+            const aboutHeroSubtitle = document.getElementById('aboutHeroSubtitle');
+            const companyTagline = document.getElementById('companyTagline');
+
+            if (aboutHeroTitle) aboutHeroTitle.textContent = config.about_hero_title || defaultConfig.about_hero_title;
+            if (aboutHeroSubtitle) aboutHeroSubtitle.textContent = config.about_hero_subtitle || defaultConfig.about_hero_subtitle;
+            if (companyTagline) companyTagline.textContent = config.company_tagline || defaultConfig.company_tagline;
+
+            // Update mission and vision titles
+            const missionTitle = document.getElementById('missionTitle');
+            const visionTitle = document.getElementById('visionTitle');
+
+            if (missionTitle) missionTitle.textContent = config.mission_title || defaultConfig.mission_title;
+            if (visionTitle) visionTitle.textContent = config.vision_title || defaultConfig.vision_title;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["company_name", config.company_name || defaultConfig.company_name],
+                ["company_tagline", config.company_tagline || defaultConfig.company_tagline],
+                ["about_hero_title", config.about_hero_title || defaultConfig.about_hero_title],
+                ["about_hero_subtitle", config.about_hero_subtitle || defaultConfig.about_hero_subtitle],
+                ["mission_title", config.mission_title || defaultConfig.mission_title],
+                ["vision_title", config.vision_title || defaultConfig.vision_title]
+            ]);
+        }
+
+        // Initialize Elements SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99713ae634ee8a6a',t:'MTc2MTg5MzU1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
